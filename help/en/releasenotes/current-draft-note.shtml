@@ -580,6 +580,8 @@
     <h3>Miscellaneous</h3>
         <a id="Misc" name="Misc"></a>
         <ul>
-            <li></li>
+            <li>Includes a fix for momentary sensors being inadvertently
+                activated during panel editing.
+            </li>
         </ul>
 
