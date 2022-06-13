@@ -198,6 +198,11 @@ public class Z21XNetOpsModeProgrammer extends jmri.jmrix.lenz.XNetOpsModeProgram
                code = ProgListener.UnknownError;
             }
 
+            // Before we set the programmer state to not programming, 
+            // delay for a short time to give the decoder a chance to 
+            // process the request.
+            new jmri.util.WaitHandler(this,100);
+
             progState = NOTPROGRAMMING;
             stopTimer();
             log.debug("sending code {} val {} to programmer",code,val);
